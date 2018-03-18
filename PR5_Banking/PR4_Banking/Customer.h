@@ -12,8 +12,63 @@ as well as its own checking and overdraft fees.
 */
 class Customer // FIXME: Complete the implementation!
 {
-
+private:
+	std::string name;
+	std::string address;
+	unsigned int age;
+	unsigned int telephone_number;
+	unsigned int customer_number;
+public:
+	std::string get_name();
+	void set_name(std::string nameInput);
+	std::string get_address();
+	void set_address(std::string addressInput);
+	int get_age();
+	void set_age(int ageInput);
+	int get_telephone_num();
+	void set_telephone_num(int telephoneNumInput);
+	int get_customer_num();
+	void set_customer_num(int customerNumInput);
 };
 
+std::string Customer::get_name() {
+	return name;
+}
+
+void Customer::set_name(std::string nameInput) {
+	name = nameInput;
+}
+
+std::string Customer::get_address() {
+	return address;
+}
+
+void Customer::set_address(std::string addressInput) {
+	address = addressInput;
+}
+
+int Customer::get_age() {
+	return age;
+}
+
+void Customer::set_age(int ageInput) {
+	age = ageInput;
+}
+
+int Customer::get_telephone_num() {
+	return telephone_number;
+}
+
+void Customer::set_telephone_num(int telephoneNumInput) {
+	telephone_number = telephoneNumInput;
+}
+
+int Customer::get_customer_num() {
+	return customer_number;
+}
+
+void Customer::set_customer_num(int customerNumInput) {
+	customer_number = customerNumInput;
+}
 
 #endif

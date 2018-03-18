@@ -117,7 +117,10 @@ public:
 		Transaction *tran = NULL;
 
 		// FIXME: Create a Transaction object and assign it to transaction vector.
+		Customer* customer_number = get_customer();
+		*tran = (customer_number, )
 
+		// end of my code
 		transactions.push_back(tran);
 	}
 

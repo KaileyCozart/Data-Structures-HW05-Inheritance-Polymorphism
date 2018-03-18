@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Banking_Application.cpp" />
+    <ClCompile Include="Customer.cpp" />
     <ClCompile Include="readint.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
