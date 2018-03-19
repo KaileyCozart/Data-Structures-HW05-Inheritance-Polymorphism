@@ -50,6 +50,11 @@ protected:
 		Transaction *tran = NULL;
 
 		// FIXME: Create a Transaction object and assign it to the transaction vector.
+		int customer_number = customer->get_customer_num();
+		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		dynamic_cast<Transaction*>(tran);
+
+		// end of my code
 
 		transactions.push_back(tran);
 	}
@@ -117,8 +122,9 @@ public:
 		Transaction *tran = NULL;
 
 		// FIXME: Create a Transaction object and assign it to transaction vector.
-		Customer* customer_number = get_customer();
-		*tran = (customer_number, )
+		int customer_number = customer->get_customer_num();
+		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		dynamic_cast<Transaction*>(tran);
 
 		// end of my code
 		transactions.push_back(tran);
@@ -134,7 +140,11 @@ public:
 		Transaction *tran = NULL;
 
 		// FIXME: Create a Transaction object and assign it to tran.
+		int customer_number = customer->get_customer_num();
+		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		dynamic_cast<Transaction*>(tran);
 
+		// end of my code
 		transactions.push_back(tran);
 	}
 

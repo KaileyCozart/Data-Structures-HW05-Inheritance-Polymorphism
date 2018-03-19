@@ -1,4 +1,9 @@
-﻿  readint.cpp
-  Banking_Application.cpp
-  Generating Code...
+﻿  Banking_Application.cpp
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(54): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(126): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(144): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\bank.h(115): warning C4930: 'Senior senior(std::string,std::string,int,int,int)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\bank.h(119): warning C4930: 'Student student(std::string,std::string,int,int,int)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\bank.h(123): warning C4930: 'Adult adult(std::string,std::string,int,int,int)': prototyped function not called (was a variable definition intended?)
+c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\bank.h(116): warning C4700: uninitialized local variable 'cust' used
   PR4_Banking.vcxproj -> C:\Users\kaiwi\Source\Repos\Data-Structures-Inheritance-Polymorphism\PR5_Banking\Debug\PR4_Banking.exe

@@ -30,15 +30,21 @@
     <ClInclude Include="Transaction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Senior.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Adult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Banking_Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="readint.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Customer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
