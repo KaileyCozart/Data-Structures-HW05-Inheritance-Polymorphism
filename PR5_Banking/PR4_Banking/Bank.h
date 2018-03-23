@@ -37,9 +37,16 @@ private:
 		std::vector<int> user_accounts;
 
 		// FIXME: Find all the accounts belonging to a customer name and add it to the vector of account numbers.
-		int customer_number = find_customer(name)->get_customer_num();
-
-
+		for (int i = 0; i <= accounts.size(); i++) {
+			std::cout << "a" << std::endl;
+			Customer* accountCustomer = accounts[i]->get_customer();
+			std::cout << "b" << std::endl;
+			if (accountCustomer->get_name() == name) {
+				int temp = accounts[i]->get_account();
+				user_accounts.push_back(temp);
+				std::cout << "c" << std::endl;
+			}
+		}
 		// end of my code
 
 		return user_accounts;
@@ -53,7 +60,6 @@ private:
 	Customer *find_customer(std::string name)
 	{
 		// FIXME: Find and return the Customer object with the parameter name
-		std::cout << "find customer function" << std::endl;
 		for (size_t i = 0; i < customers.size(); i++) {
 			if (customers[i]->get_name() == name)
 				return customers[i];
@@ -74,13 +80,12 @@ private:
 
 		// FIXME: Factory method for creating a Account object (could be a Saving_Account or a Checking_Account).
 		if (account_type == "savings") {
-			acct = new SavingsAccount(cust, 5);
+			acct = new SavingsAccount(cust, account_id);
 		}
 		else if (account_type == "checking") {
-			acct = new CheckingAccount(cust, 5);
+			acct = new CheckingAccount(cust, account_id);
 		}
 		// end of my code
-		std::cout << "end of add acct" << std::endl;
 		return acct;
 	}
 
@@ -119,23 +124,15 @@ public:
 		Customer *cust;
 
 		// FIXME: Depending on the customer type, we want to create an Adult, Senior, or Student object.
-
 		if (cust_type == "senior") {
 			cust = new Senior(name, address, age, 2, 1);
-			std::cout << cust->get_address() << std::endl;
-			// *cust = senior;
 		}
 		else if (cust_type == "student") {
 			cust = new Student(name, address, age, 2, 1);
-			//Student student(std::string name, std::string address, int age, int telephone_number, int customer_number);
-			//dynamic_cast<Student*>(cust);
 		}
 		else if (cust_type == "adult") {
 			cust = new Adult(name, address, age, 2, 1);
-			//Adult adult(std::string name, std::string address, int age, int telephone_number, int customer_number);
-			//dynamic_cast<Adult*>(cust);
 		}
-
 		// end of my code
 
 		customers.push_back(cust);
@@ -155,6 +152,7 @@ public:
 			double current_balance = get_account(acct_number)->get_balance();
 			double new_balance = current_balance + amt;
 			get_account(acct_number)->set_balance(new_balance);
+			std::cout << "Your new balance is " << new_balance << "." << std::endl;
 			// end of my code
 		}
 	}

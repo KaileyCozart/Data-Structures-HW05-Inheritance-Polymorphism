@@ -147,7 +147,8 @@ int main()
 		string	menu_string = "Please choose an action below:\n";
 				menu_string += "0 - Add Account\n";
 				menu_string += "1 - List Accounts\n";
-				menu_string += "3 - Make withdrawal\n";
+				menu_string += "2 - Make Deposit\n";
+				menu_string += "3 - Make Withdrawal\n";
 				menu_string += "4 - Quit\n";
 				menu_string += "Enter: ";
 		select = read_int(menu_string, 0, 4);

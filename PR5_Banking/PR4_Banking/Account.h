@@ -108,8 +108,8 @@ public:
 		std::stringstream ss; // for composing the string that describes this account
 
 		// FIXME: Add information about the customer who owns this account.
-		double balance = get_balance();
-		double account_number = get_account();
+		balance = get_balance();
+		account_number = get_account();
 		// end of my code
 		ss << "  Balance: " << balance << std::endl;
 		ss << "  Account ID: " << account_number << std::endl;
