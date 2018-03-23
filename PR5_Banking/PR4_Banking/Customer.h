@@ -30,6 +30,8 @@ public:
 	virtual void set_telephone_num(std::string telephone_number);
 	virtual int get_customer_num();
 	virtual void set_customer_num(int customer_number);
+	virtual double get_check_charge();
+	virtual double get_overdraft_penalty();
 };
 
 Customer::Customer(std::string name, std::string address, int age, std::string telephone_number, int customer_number) {
@@ -78,6 +80,16 @@ int Customer::get_customer_num() {
 
 void Customer::set_customer_num(int customer_number) {
 	this->customer_number = customer_number;
+}
+
+double Customer::get_check_charge() {
+	double checkCharge = this->get_check_charge();
+	return checkCharge;
+}
+
+double Customer::get_overdraft_penalty() {
+	double overdraftPenalty = this->get_overdraft_penalty();
+	return overdraftPenalty;
 }
 
 #endif

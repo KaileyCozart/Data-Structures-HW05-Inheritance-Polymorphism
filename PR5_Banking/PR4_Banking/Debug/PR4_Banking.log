@@ -1,3 +1,5 @@
 ﻿  Banking_Application.cpp
+c:\users\kcozart21\source\repos\data-structures-inheritance-polymorphism2\pr5_banking\pr4_banking\account.h(35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\kcozart21\source\repos\data-structures-inheritance-polymorphism2\pr5_banking\pr4_banking\account.h(36): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   PR4_Banking.vcxproj -> C:\Users\kcozart21\Source\Repos\Data-Structures-Inheritance-Polymorphism2\PR5_Banking\Debug\PR4_Banking.exe
   PR4_Banking.vcxproj -> C:\Users\kcozart21\Source\Repos\Data-Structures-Inheritance-Polymorphism2\PR5_Banking\Debug\PR4_Banking.pdb (Partial PDB)

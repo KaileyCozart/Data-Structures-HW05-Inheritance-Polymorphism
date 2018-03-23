@@ -32,8 +32,8 @@ protected:
 
 		// Polymorphism: calls the correct virtual methods from the specific customer type
 		// FIXME: Get the overdraft and check charge information from this accounts customer
-		charge = 5;//this->customer.check_charge;
-		overdraft = 6; //(*customer)->overdraft_penalty;
+		charge = customer->get_check_charge();
+		overdraft = customer->get_overdraft_penalty();
 		// end of my code
 		std::stringstream ss;
 		ss << "Check Charge: " << charge << " Overdraft Fee: " << overdraft;
