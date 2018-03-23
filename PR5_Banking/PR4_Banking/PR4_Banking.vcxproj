@@ -80,8 +80,10 @@
     <ClInclude Include="Account.h" />
     <ClInclude Include="Adult.h" />
     <ClInclude Include="Bank.h" />
+    <ClInclude Include="CheckingAccount.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="readint.h" />
+    <ClInclude Include="SavingsAccount.h" />
     <ClInclude Include="Senior.h" />
     <ClInclude Include="Student.h" />
     <ClInclude Include="Transaction.h" />

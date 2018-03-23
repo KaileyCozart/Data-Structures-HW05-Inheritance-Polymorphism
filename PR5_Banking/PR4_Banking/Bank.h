@@ -7,6 +7,8 @@
 #include "Student.h"
 #include "Adult.h"
 #include "Senior.h"
+#include "SavingsAccount.h"
+#include "CheckingAccount.h"
 
 /**
 The CS273 Bank has Accounts and Customers
@@ -18,16 +20,16 @@ class Bank
 private:
 	std::vector<Account *> accounts; // Bank HAS accounts
 	std::vector<Customer *> customers;  // Bank HAS customers
-	
-	// Counters for generating unique account and customer IDs
-	int account_id;     
+
+										// Counters for generating unique account and customer IDs
+	int account_id;
 	int customer_id;
 
 
 	/**
 	Return a vector of accounts owned by the specified name of the customer.
-	Remember a customer can have many accounts.  
-	@param name The customer name 
+	Remember a customer can have many accounts.
+	@param name The customer name
 	@return vector of account ids
 	*/
 	std::vector<int> find_accounts_by_name(std::string name)
@@ -37,7 +39,7 @@ private:
 		// FIXME: Find all the accounts belonging to a customer name and add it to the vector of account numbers.
 		int customer_number = find_customer(name)->get_customer_num();
 
-		
+
 		// end of my code
 
 		return user_accounts;
@@ -51,6 +53,7 @@ private:
 	Customer *find_customer(std::string name)
 	{
 		// FIXME: Find and return the Customer object with the parameter name
+		std::cout << "find customer function" << std::endl;
 		for (size_t i = 0; i < customers.size(); i++) {
 			if (customers[i]->get_name() == name)
 				return customers[i];
@@ -59,19 +62,25 @@ private:
 		return NULL;
 	}
 
-	/** 
+	/**
 	Add a new account to a customer object (irrespective of its specific type: adult, senior, or student)
-	@param cust The customer object 
+	@param cust The customer object
 	@param account_type The account type, i.e. "savings" or "checking"
 	@return the newly created account object
 	*/
-	Account * add_account (Customer *cust, std::string account_type)
+	Account * add_account(Customer *cust, std::string account_type)
 	{
 		Account *acct = NULL;
 
 		// FIXME: Factory method for creating a Account object (could be a Saving_Account or a Checking_Account).
-		
+		if (account_type == "savings") {
+			acct = new SavingsAccount(cust, 5);
+		}
+		else if (account_type == "checking") {
+			acct = new CheckingAccount(cust, 5);
+		}
 		// end of my code
+		std::cout << "end of add acct" << std::endl;
 		return acct;
 	}
 
@@ -86,7 +95,7 @@ public:
 	@param account_type The account type, i.e. "checking" or "savings"
 	@return the newly created account object if the customer exist, or NULL otherwise
 	*/
-	Account* add_account(std::string name, std::string account_type) 
+	Account* add_account(std::string name, std::string account_type)
 	{
 		Customer *cust = find_customer(name);
 		if (cust == NULL)
@@ -94,7 +103,7 @@ public:
 		return add_account(cust, account_type);
 	}
 
-	/** 
+	/**
 	Add account for new user.  This creates a new customer and adds an account to him/her.
 	@param name Customer name
 	@param address Customer address
@@ -104,26 +113,29 @@ public:
 	@param account_type Account type, i.e. "checking" or "savings"
 	@return the newly created account object
 	*/
-	Account* add_account(std::string name, std::string address, std::string telephone, int age, 
+	Account* add_account(std::string name, std::string address, std::string telephone, int age,
 		std::string cust_type, std::string account_type)
 	{
 		Customer *cust;
-		
+
 		// FIXME: Depending on the customer type, we want to create an Adult, Senior, or Student object.
-		
+
 		if (cust_type == "senior") {
-			Senior senior(std::string name, std::string address, int age, int telephone_number, int customer_number);
-			dynamic_cast<Senior*>(cust);
+			cust = new Senior(name, address, age, 2, 1);
+			std::cout << cust->get_address() << std::endl;
+			// *cust = senior;
 		}
 		else if (cust_type == "student") {
-			Student student(std::string name, std::string address, int age, int telephone_number, int customer_number);
-			dynamic_cast<Student*>(cust);
+			cust = new Student(name, address, age, 2, 1);
+			//Student student(std::string name, std::string address, int age, int telephone_number, int customer_number);
+			//dynamic_cast<Student*>(cust);
 		}
-		else {
-			Adult adult(std::string name, std::string address, int age, int telephone_number, int customer_number);
-			dynamic_cast<Adult*>(cust);
+		else if (cust_type == "adult") {
+			cust = new Adult(name, address, age, 2, 1);
+			//Adult adult(std::string name, std::string address, int age, int telephone_number, int customer_number);
+			//dynamic_cast<Adult*>(cust);
 		}
-		
+
 		// end of my code
 
 		customers.push_back(cust);
@@ -135,7 +147,7 @@ public:
 	@param acct_number	The account id
 	@param amt			The amount to deposit
 	*/
-	void make_deposit(int acct_number, double amt) 
+	void make_deposit(int acct_number, double amt)
 	{
 		Account *acct = get_account(acct_number);
 		if (acct) {
@@ -147,12 +159,12 @@ public:
 		}
 	}
 
-	/** 
+	/**
 	Make a withdrawal in an account identified by the account id
 	@param acct_number	The account id
 	@param amt			The amount to withdraw
 	*/
-	void make_withdrawal(int acct_number, double amt) 
+	void make_withdrawal(int acct_number, double amt)
 	{
 		Account *acct = get_account(acct_number);
 		if (acct) {
@@ -169,7 +181,7 @@ public:
 	@param name The customer name
 	@return vector of account ids
 	*/
-	std::vector<int> get_account(std::string name) 
+	std::vector<int> get_account(std::string name)
 	{
 		return find_accounts_by_name(name);
 	}

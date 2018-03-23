@@ -39,6 +39,12 @@
     <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SavingsAccount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckingAccount.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Banking_Application.cpp">

@@ -38,6 +38,7 @@ Customer::Customer(std::string name, std::string address, int age, int telephone
 	this->age = age;
 	this->telephone_number = telephone_number;
 	this->customer_number = customer_number;
+	std::cout << "customer constructor" << std::endl;
 }
 
 std::string Customer::get_name() {
