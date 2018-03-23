@@ -38,13 +38,10 @@ private:
 
 		// FIXME: Find all the accounts belonging to a customer name and add it to the vector of account numbers.
 		for (unsigned int i = 0; i < accounts.size(); i++) {
-			std::cout << "a" << std::endl;
 			Customer* accountCustomer = accounts[i]->get_customer();
-			std::cout << "b" << std::endl;
 			if (accountCustomer->get_name() == name) {
 				int temp = accounts[i]->get_account();
 				user_accounts.push_back(temp);
-				std::cout << "c" << std::endl;
 			}
 		}
 		// end of my code

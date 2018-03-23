@@ -131,8 +131,8 @@ public:
 		std::string type = "deposit";
 		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
-
 		// end of my code
+
 		transactions.push_back(tran);
 	}
 
