@@ -70,7 +70,6 @@ void Add_Account(Bank &bank)
 		else 
 			cust_type_str = "student";
 		acct = bank.add_account(name, address, telephone, age, cust_type_str, acct_type_str);
-		// accounts.push_back(acct);
 	}
 	if (acct) {
 		cout << "Your new account ID is " << acct->get_account() << endl;

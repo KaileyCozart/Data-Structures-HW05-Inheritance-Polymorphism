@@ -32,7 +32,7 @@ protected:
 
 		// Polymorphism: calls the correct virtual methods from the specific customer type
 		// FIXME: Get the overdraft and check charge information from this accounts customer
-		charge = 5; //(*customer).check_charge;
+		charge = 5;//this->customer.check_charge;
 		overdraft = 6; //(*customer)->overdraft_penalty;
 		// end of my code
 		std::stringstream ss;
@@ -56,7 +56,6 @@ protected:
 		std::string type = "add interest";
 		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
-
 		// end of my code
 
 		transactions.push_back(tran);
@@ -112,6 +111,7 @@ public:
 		balance = get_balance();
 		account_number = get_account();
 		// end of my code
+
 		ss << "  Balance: " << balance << std::endl;
 		ss << "  Account ID: " << account_number << std::endl;
 		return ss.str();
@@ -150,8 +150,8 @@ public:
 		std::string type = "withdrawal";
 		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
-
 		// end of my code
+
 		transactions.push_back(tran);
 	}
 

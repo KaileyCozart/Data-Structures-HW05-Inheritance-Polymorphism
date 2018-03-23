@@ -38,15 +38,12 @@ private:
 
 		// FIXME: Find all the accounts belonging to a customer name and add it to the vector of account numbers.
 		for (unsigned int i = 0; i < accounts.size(); i++) {
-			std::cout << "test" << std::endl;
 			Customer* accountCustomer = accounts[i]->get_customer();
 			if (accountCustomer->get_name() == name) {
-				int temp = accounts[i]->get_account(); // vector subscript out of range
+				int temp = accounts[i]->get_account();
 				user_accounts.push_back(temp);
 			}
 		}
-		//int temp = accounts[0].get_account(); // vector subscript out of range
-		//user_accounts.push_back(1234);
 		// end of my code
 
 		return user_accounts;
@@ -87,6 +84,7 @@ private:
 		}
 		accounts.push_back(acct);
 		// end of my code
+
 		return acct;
 	}
 
@@ -125,14 +123,15 @@ public:
 		Customer *cust;
 
 		// FIXME: Depending on the customer type, we want to create an Adult, Senior, or Student object.
+		
 		if (cust_type == "senior") {
-			cust = new Senior(name, address, age, 123, customer_id);
+			cust = new Senior(name, address, age, telephone, customer_id);
 		}
 		else if (cust_type == "student") {
-			cust = new Student(name, address, age, 123, customer_id);
+			cust = new Student(name, address, age, telephone, customer_id);
 		}
 		else if (cust_type == "adult") {
-			cust = new Adult(name, address, age, 123, customer_id);
+			cust = new Adult(name, address, age, telephone, customer_id);
 		}
 		// end of my code
 

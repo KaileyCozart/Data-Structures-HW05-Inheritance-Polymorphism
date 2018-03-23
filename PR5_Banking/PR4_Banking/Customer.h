@@ -16,23 +16,23 @@ private:
 	std::string name;
 	std::string address;
 	int age;
-	int telephone_number;
+	std::string telephone_number;
 	int customer_number;
 public:
-	Customer(std::string name, std::string address, int age, int telephone_number, int customer_number);
+	Customer(std::string name, std::string address, int age, std::string telephone_number, int customer_number);
 	virtual std::string get_name();
 	virtual void set_name(std::string name);
 	virtual std::string get_address();
 	virtual void set_address(std::string address);
 	virtual int get_age();
 	virtual void set_age(int ageInput);
-	virtual int get_telephone_num();
-	virtual void set_telephone_num(int telephone_number);
+	virtual std::string get_telephone_num();
+	virtual void set_telephone_num(std::string telephone_number);
 	virtual int get_customer_num();
 	virtual void set_customer_num(int customer_number);
 };
 
-Customer::Customer(std::string name, std::string address, int age, int telephone_number, int customer_number) {
+Customer::Customer(std::string name, std::string address, int age, std::string telephone_number, int customer_number) {
 	this->name = name;
 	this->address = address;
 	this->age = age;
@@ -64,11 +64,11 @@ void Customer::set_age(int age) {
 	this->age = age;
 }
 
-int Customer::get_telephone_num() {
+std::string Customer::get_telephone_num() {
 	return telephone_number;
 }
 
-void Customer::set_telephone_num(int telephone_number) {
+void Customer::set_telephone_num(std::string telephone_number) {
 	this->telephone_number = telephone_number;
 }
 
