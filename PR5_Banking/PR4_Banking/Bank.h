@@ -38,12 +38,15 @@ private:
 
 		// FIXME: Find all the accounts belonging to a customer name and add it to the vector of account numbers.
 		for (unsigned int i = 0; i < accounts.size(); i++) {
+			std::cout << "test" << std::endl;
 			Customer* accountCustomer = accounts[i]->get_customer();
 			if (accountCustomer->get_name() == name) {
-				int temp = accounts[i]->get_account();
+				int temp = accounts[i]->get_account(); // vector subscript out of range
 				user_accounts.push_back(temp);
 			}
 		}
+		//int temp = accounts[0].get_account(); // vector subscript out of range
+		//user_accounts.push_back(1234);
 		// end of my code
 
 		return user_accounts;
@@ -82,6 +85,7 @@ private:
 		else if (account_type == "checking") {
 			acct = new CheckingAccount(cust, account_id);
 		}
+		accounts.push_back(acct);
 		// end of my code
 		return acct;
 	}
