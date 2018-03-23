@@ -1,6 +1,2 @@
 ﻿  Banking_Application.cpp
-c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(56): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
-c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(130): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
-c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\account.h(148): warning C4930: 'Transaction transaction(int,double,double,std::string)': prototyped function not called (was a variable definition intended?)
-c:\users\kaiwi\source\repos\data-structures-inheritance-polymorphism\pr5_banking\pr4_banking\bank.h(40): warning C4018: '<=': signed/unsigned mismatch
   PR4_Banking.vcxproj -> C:\Users\kaiwi\Source\Repos\Data-Structures-Inheritance-Polymorphism\PR5_Banking\Debug\PR4_Banking.exe

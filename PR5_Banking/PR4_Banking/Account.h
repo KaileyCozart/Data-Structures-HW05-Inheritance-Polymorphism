@@ -53,7 +53,8 @@ protected:
 
 		// FIXME: Create a Transaction object and assign it to the transaction vector.
 		int customer_number = customer->get_customer_num();
-		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		std::string type = "add interest";
+		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
 
 		// end of my code
@@ -127,7 +128,8 @@ public:
 
 		// FIXME: Create a Transaction object and assign it to transaction vector.
 		int customer_number = customer->get_customer_num();
-		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		std::string type = "deposit";
+		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
 
 		// end of my code
@@ -145,7 +147,8 @@ public:
 
 		// FIXME: Create a Transaction object and assign it to tran.
 		int customer_number = customer->get_customer_num();
-		Transaction transaction(int customer_number, double interest, double amt, std::string fees);
+		std::string type = "withdrawal";
+		Transaction transaction(customer_number, type, amt, fees);
 		dynamic_cast<Transaction*>(tran);
 
 		// end of my code
