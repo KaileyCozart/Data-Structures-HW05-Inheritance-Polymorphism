@@ -24,6 +24,7 @@ private:
 										// Counters for generating unique account and customer IDs
 	int account_id;
 	int customer_id;
+	int i = 0;
 
 
 	/**
@@ -76,6 +77,8 @@ private:
 		Account *acct = NULL;
 
 		// FIXME: Factory method for creating a Account object (could be a Saving_Account or a Checking_Account).
+		account_id = account_id + i;
+		i++;
 		if (account_type == "savings") {
 			acct = new SavingsAccount(cust, account_id);
 		}
